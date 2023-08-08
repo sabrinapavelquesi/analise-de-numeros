@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;800&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {  
+                fontFamily: {
+                    'roboto': ['Roboto']
+                }
+              }
+            }
+        }
+      </script>
+    <title>Aalisador de Números</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body class="bg-violet-100">
+    <header class="justify-center">
+        <h1 class="text-3xl sm:text-5xl font-bold text-center text-violet-600 py-5 sticky top-0">Analisador de Números</h1>
+    </header> 
+        <section class="mx-auto w-auto max-w-screen-md p-4 bg-violet-200 shadow-md shadow-violet-500/50 rounded-lg">
+            <div class="w-full h-min">
+                <div class="mb-2">
+                    <p class="text-violet-800 font-medium w-full text-center sm:text-xl sm:text-left">
+                        Insira números entre 1 a 100: 
+                    </p>
+                </div>
+                <input class="w-full p-2 md:w-4/12 mb-2 rounded shadow-md shadow-violet-500/50 focus:outline-none focus:ring focus:ring-violet-300" type="number" name="num" id="num"> 
+                <input class="bg-violet-500 shadow-md shadow-violet-500/50 text-white rounded font-bold p-2 w-full hover:bg-violet-400 mb-2" type="button" value="Adicionar" onclick="adicionar(document.getElementById('num'))">
+            </div>
+            <div class="w-full md:grid md:grid-cols-11 md:gap-2 md:mt-1 md:mb-5">
+                <select class="w-full rounded shadow-md shadow-violet-500/50 focus:outline-none focus:ring focus:ring-violet-300 overflow-auto text-violet-800 md:col-span-4" name="lista" id="lista" size="10">
+                </select>
+                <div id="res" class="w-full md:col-span-7 p-2 text-violet-800 bg-violet-100 rounded shadow-md shadow-violet-500/50 text-base hidden md:block"></div>
+            </div>
+            <div class="w-full grid grid-cols-2 gap-5 sm:gap-10 h-min mt-3">
+                <input class="bg-violet-500 shadow-md shadow-violet-500/50 text-white rounded font-bold p-1 hover:bg-violet-400" type="button" value="Finalizar" onclick="finalizar()">
+                <input class="bg-violet-500 shadow-md shadow-violet-500/50 text-white rounded font-bold p-2 hover:bg-violet-400" type="button" value="Limpar" onclick="limpar()">
+            </div>
+        </section>
+    <footer class="bg-violet-500 fixed bottom-0 w-full text-center">
+        <p class="text-white text-xs sm:text-base font-bold p-1 sm:p-2">Desenvolvido por Sabrina Pavelquesi, pelo &copy; CursoemVideo</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- md:grid md:grid-cols-11 md:gap-2 md:mt-1 md:mb-10 md:col-span-4 -->
